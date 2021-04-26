@@ -1,0 +1,33 @@
+#include <stdio.h>
+//Penamaan variabel
+char nama[50],alamat[100],kelas,bulan[10],tempat[30],no_hp[15];
+int tanggal, tahun, nim,umur;
+int main(){
+//Input data diri mahasiswa
+  printf("=== Masukkan Data Diri====\n");
+  printf("\nNama\t: ");
+  scanf("%[^\n]",&nama);fflush(stdin);
+  printf("\nNIM\t: "); scanf("%d", &nim); fflush(stdin);
+  printf("\nKelas\t: "); 
+  scanf("%c", &kelas); fflush(stdin);
+  printf("\nAlamat\t: ");
+  scanf("%[^\n]", &alamat);fflush(stdin);
+  printf("\nNo HP\t: ");
+  scanf("%s",&no_hp);fflush(stdin);
+  printf("\nTanggal Lahir\t: ");
+  scanf("%s",&tempat);scanf("%d",&tanggal);
+  scanf("%s",&bulan);scanf("%d",&tahun);
+  umur=2021-tahun;
+ 
+//Output data diri
+  printf("\n*****Terima Kasih Sudah Mendaftar!*****\n");
+  printf("\nNama\t\t: %s",nama);
+  printf("\nNIM\t\t: %d",nim);
+  printf("\nKelas\t\t: %c",kelas);
+  printf("\nAlamat\t\t: %s",alamat);
+  printf("\nNo HP\t\t: %s",no_hp);
+  printf("\nTanggal Lahir\t: %s %u %s %u",tempat, 
+  tanggal, bulan, tahun);
+  printf("\nUmur\t\t: %d tahun",umur);
+  return 0;
+}
