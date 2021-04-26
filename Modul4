@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+/*Buat fungsi*/
+void balik(char string[]) {
+  int a, b, c;
+ //strlen(string) = hitung panjang kata
+  for (b = 0, c = strlen(string)-1; b <c;b++, c--) {
+  a = string[b];
+  string[b] = string[c];
+  string[c] = a;
+  }
+  return;
+}
+int main() {
+  char kata1[200];
+  printf("Masukkan kata: ");
+  scanf("%s",&kata1);
+  char kata2[200];
+//strcpy() berfungsi untuk menyalin kata1 yang diinput ke kata1 untuk di print
+  strcpy(kata2,kata1);
+  balik(kata1); //panggil fungsi
+    if(strcmp(kata1, kata2) == 0) {
+      printf("Kata %s merupakan Palindrom\n",kata1);
+    }
+    else{
+      printf("Kata %s Bukan Palindrom\n",kata2);
+    }
+ return 0;
+}
